@@ -1,17 +1,17 @@
 from socket import AF_INET, SOCK_DGRAM, socket
 
+
 BUFFER_SIZE = 1024
 HOST = "0.0.0.0"
-PORT = 5000
-
+PORT = int(input("inserisci la porta: "))
 
 def chatServer():
     with socket(AF_INET, SOCK_DGRAM) as s:
         s.bind((HOST, PORT))
-            while True
-                msg = s.recvfrom(BUFFER_SIZE)
-                msg = msg[0].decode('UTF8')
-                print(msg)
+        while True:
+            msg = s.recvfrom(BUFFER_SIZE)
+            msg = msg[0].decode('UTF8')
+            print(msg)
 
 
 
